@@ -5,7 +5,7 @@ local btn_x, btn_y, btn_w, btn_h = 20, 60, 120, 30
 local was_clicked = false
 
 shinx.gui_register(
-    "counter",
+    "counter-gui",
     "Counter",          
     "__counter_draw",   
     "__counter_key",    
