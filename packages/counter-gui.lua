@@ -16,7 +16,7 @@ shinx.gui_register(
 function __counter_draw()
     local w = shinx.gui_width()
 
-    shinx.gui_text(10, 10, "Count: " .. count, "black")
+    shinx.gui_label(10, 10, "Count: " .. count, "black")
 
     local clicked = shinx.gui_click()
     local mx, my  = shinx.gui_mouse()
@@ -25,7 +25,7 @@ function __counter_draw()
 
     shinx.gui_rectfill(btn_x, btn_y, btn_w, btn_h, hover and "cyan" or "gray")
     shinx.gui_rect(btn_x, btn_y, btn_w, btn_h, "black")
-    shinx.gui_text(btn_x + 30, btn_y + 8, "Click me", "black")
+    shinx.gui_label(btn_x + 30, btn_y + 8, "Click me", "black")
 
     if clicked and hover then
         if not was_clicked then
@@ -38,7 +38,7 @@ function __counter_draw()
 
     shinx.gui_rectfill(btn_x, btn_y + 40, btn_w, btn_h, "darkred")
     shinx.gui_rect(btn_x, btn_y + 40, btn_w, btn_h, "white")
-    shinx.gui_text(btn_x + 35, btn_y + 48, "Reset", "white")
+    shinx.gui_label(btn_x + 35, btn_y + 48, "Reset", "white")
 
     if clicked and mx >= btn_x and mx <= btn_x + btn_w
                and my >= btn_y + 40 and my <= btn_y + 70 then
